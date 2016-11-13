@@ -1,0 +1,70 @@
+---
+title: "Pandoc Markdown"
+author: "Gareth R. White"
+date: "3 November 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+knitr::knit() creates .md from .Rmd
+knitr::pandoc() creates .docx (or any other type) files from .md
+
+
+
+http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html
+
+Newlines are treated as spaces,
+so you can reflow your paragraphs as you like.
+If you need a hard line break,  
+put two or more spaces at the end of a line.
+
+A level-one Setext-style header
+==============================
+
+A level-two Setext-style header
+-------------------------------
+
+## A level-two ATX-style header
+
+## A level-two ATX-style header ##
+
+### A level-three ATX-style header
+
+### A level-three ATX-style header ###
+
+A level-one Setext-style header with a [link](/url) and *emphasis*
+==================================================================
+
+# A level-one Setext-style header with a [link](/url) and *emphasis*
+
+
+
+A block of text indented four spaces (or one tab) is treated as verbatim text: that is, special characters do not trigger special formatting, and all spaces and line breaks are preserved. For example,
+    if (a > 3) {
+      moveShip(5 * gravity, DOWN);
+    }
+The initial (four space or one tab) indentation is not considered part of the verbatim text, and is removed in the output.
+Note: blank lines in the verbatim text need not begin with four spaces.
+
+
+
+* Compact one
+* Compact two
+* Compact three
+
+* Loose one
+
+* Loose two
+
+* Loose three
+
+* here is my first
+  list item.
+* and my second.
+
+* here is my first
+list item in lazy form.
+* and my second.

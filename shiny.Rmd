@@ -1,0 +1,59 @@
+# Debugging
+
+## "printf" tracing
+```{r eval = FALSE}
+cat(file=stderr(), "drawing histogram with", 1, "bins\n")
+```
+
+## Unconditional breakpoints
+Just click next to a line in Rstudio.
+
+## Conditional breakpoint
+```{r eval=FALSE}
+if (input$bins > 50)
+  browser()
+```
+
+## Showcase Mode
+```{r eval=FALSE}
+runApp(..., display.mode="showcase")
+```
+
+## Reactive Log
+```{r eval=FALSE}
+options(shiny.reactlog=TRUE)
+runApp(...)
+showReactLog()
+```
+
+## Client/server tracing
+```{r eval = FALSE}
+options(shiny.trace = TRUE)
+```
+
+SEND {"config":{"workerId":"","sessionId":"04531d50d12554bd981b24b9d3983cc4"}}
+RECV {"method":"init","data":{"bins":30,".clientdata_output_distPlot_width":610,
+  ".clientdata_output_distPlot_height":400,".clientdata_output_distPlot_hidden":false,
+  ".clientdata_pixelratio":1,".clientdata_url_protocol":"http:",
+  ".clientdata_url_hostname":"127.0.0.1",".clientdata_url_port":"5569",
+  ".clientdata_url_pathname":"/",".clientdata_url_search":"",
+  ".clientdata_url_hash_initial":"",".clientdata_singletons":"",
+  ".clientdata_allowDataUriScheme":true}}
+
+# Error Handling
+## Tracebacks
+
+```{r eval=FALSE}
+if (input$bins > 40)
+  stop("too many bins")
+```
+
+## Full tracebacks
+```{r eval=FALSE}
+options(shiny.fullstacktrace = TRUE)
+```
+
+## Pausing on errors
+```{r eval = FALSE}
+options(shiny.error = browser)
+```
