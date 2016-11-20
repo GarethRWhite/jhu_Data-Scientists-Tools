@@ -1,4 +1,29 @@
-#Introduction to Git
+https://www.quora.com/Whats-the-difference-between-git-pulland-git-fetch
+
+git (locally) has a directory (.git) which you commit your files to and this is your 'local repository'.
+
+Merging
+
+Merging is the process of combining code changes from different branches, or from different versions of the same branch (for example when a local branch and remote are out of sync.). If one has developed work in a branch and the work is complete, ready and tested, then it can be merged into the master branch. This is done by:
+git checkout master #to switch to the master branch
+git pull origin master
+git merge your_branch
+
+Once you have resolved any conflicts you will once again git add and git commit those changes to continue the merge
+
+
+
+# Branch
+https://longair.net/blog/2009/04/16/git-fetch-and-merge/
+a name for a particular commit and all the commits that are ancestors of it
+
+
+git checkout stable   # Change to work on the branch "stable"
+git merge new-idea    # Merge in "new-idea"
+
+
+
+# Introduction to Git
 git config --global user.name "Gareth R. White"
 git config --global user.email "GarethRWhite@yahoo.com"
 git config --list
