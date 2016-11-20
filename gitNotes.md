@@ -46,34 +46,42 @@ git remote add origin https://github.com/GarethRWhite/jhu_Data-Scientists-Tools
 Fork (to current working directory):
 git clone https://github.com/GarethRWhite/jhu_Data-Scientists-Tools.git
 
-Push local changes:
-
-Create new file, add to index:
-add -u
-
-Commit to local repository:
-commit
-
-Create new file, add to index, and commit to local repository
-commit -a
+Review local changes
+git status
 
 
-
-
+## Add
 Add all new files from cwd
 git add .
 
+Push local changes
 Update tracking for files that changed names or were deleted
+Create new file, add to index
 git add -u
 
 Add all new files, and update tracking for files that changed names or were deleted
 git add -A
 
+
+## Commit
+Commit to local repository:
+git commit
+
+Create new file, add to index, and commit to local repository
+git commit -a
+
 Update local repository
 git commit -m "useful description of changes"
 
+
+## Push
 Push to remote repository
 git push
+
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
 
 
 
